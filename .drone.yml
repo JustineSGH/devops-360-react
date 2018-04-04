@@ -5,10 +5,12 @@ pipeline:
     image: node:alpine
     commands: 
       - yarn
+      
   test:
     image: node:alpine
     commands:
       - yarn test
+
     notify: 
       image: plugins/slack
       webhook: <slack_webhook>
